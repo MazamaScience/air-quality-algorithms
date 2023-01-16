@@ -2,8 +2,8 @@
  * Returns an array of NowCast values derived from the incoming time series.
  * Missing values should be represented by 'null'.
  * **NOTE:** Incoming data must be on an hourly axis with no gaps.
- * @param {...number} pm Array of PM2.5 or PM10  measurements.
- * @returns {...number} Array of NowCast values.
+ * @param {...Number} pm Array of PM2.5 or PM10  measurements.
+ * @returns {...Number} Array of NowCast values.
  */
 export function pm_nowcast(pm) {
   // TODO: Validate that pm is numeric
