@@ -1,25 +1,25 @@
 /**
  * Returns an array of NowCast values derived from the incoming time series.
- * Missing values should be 'null'.
+ * Missing values should be represented by 'null'.
  * **NOTE:** Incoming data must be on an hourly axis with no gaps.
- * @param {...number} pm25 Array of PM 2.5 measurements.
+ * @param {...number} pm Array of PM2.5 or PM10  measurements.
  * @returns {...number} Array of NowCast values.
  */
-export function pm25_nowcast(pm25) {
-  // TODO:  Validate that pm25 is
+export function pm_nowcast(pm) {
+  // TODO: Validate that pm is numeric
   // See:  https://observablehq.com/@openaq/epa-pm-nowcast
-  let nowcast = Array(pm25.length);
-  for (let i = 0; i < pm25.length; i++) {
+  let nowcast = Array(pm.length);
+  for (let i = 0; i < pm.length; i++) {
     let end = i + 1;
     let start = end < 12 ? 0 : end - 12;
-    nowcast[i] = nowcastPM(pm25.slice(start, end));
+    nowcast[i] = nowcastPM(pm.slice(start, end));
   }
   return nowcast;
 }
 
 /**
- * Convert an array of up to 12 PM2.5 measurements in chronological order
- * into a single NowCast value. Missing values should be 'null'.
+ * Convert an array of up to 12 PM2.5 or PM10 measurements in chronological order
+ * into a single NowCast value. Missing values should be represented by 'null'.
  * **NOTE:** Incoming data must be on an hourly axis with no gaps.
  * @param {...Number} x Array of 12 values in chronological order.
  * @returns {Number} NowCast value.
@@ -55,7 +55,7 @@ function nowcastPM(x) {
     1 - scaledRateOfChange < 0.5 ? 0.5 : 1 - scaledRateOfChange;
 
   // TODO:  Check for any valid values before attempting to reduce.
-  // TODO:  If all NaN, then simple return null.
+  // TODO:  If all NaN, then simply return null.
 
   let weightedValues = x
     .map((o, i) => o * Math.pow(weightFactor, i)) // maps onto an array including NaN
@@ -74,7 +74,7 @@ function nowcastPM(x) {
 
   let returnVal = parseFloat((weightedSum / weightFactorSum).toFixed(1));
 
-  // Convert NaN back to null for Highcharts
+  // Convert NaN back to null
   returnVal = Number.isNaN(returnVal) ? null : returnVal;
   return returnVal;
 }

@@ -3,4 +3,4 @@
  * arrays of air quality monitoring data.
  */
 
-export { pm25_nowcast } from "./nowcast.js";
+export { pm_nowcast } from "./nowcast.js";
