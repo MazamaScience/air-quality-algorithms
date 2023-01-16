@@ -1,5 +1,5 @@
 {
-  "name": "air-quality-algorithms",
+  "name": "air-monitor-algorithms",
   "version": "0.0.1",
   "description": "Algorithms used in air quality processing.",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MazamaScience/air-quality-algorithms.git"
+    "url": "git+https://github.com/MazamaScience/air-monitor-algorithms.git"
   },
   "keywords": [
     "'air-quality'"
@@ -17,9 +17,9 @@
   "author": "Jonathan Callahan",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/MazamaScience/air-quality-algorithms/issues"
+    "url": "https://github.com/MazamaScience/air-monitor-algorithms/issues"
   },
-  "homepage": "https://github.com/MazamaScience/air-quality-algorithms#readme",
+  "homepage": "https://github.com/MazamaScience/air-monitor-algorithms#readme",
   "dependencies": {
     "moment-timezone": "^0.5.40"
   }
