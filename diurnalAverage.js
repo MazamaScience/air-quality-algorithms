@@ -42,7 +42,7 @@ export function diurnalAverage(datetime, x, timezone, dayCount = 7) {
 
   // Round to one decimal place and ensure null is the missing value
   hourly_avg = hourly_avg.map((o) =>
-    isNaN(o) || o === undefined ? null : Math.round(10 * o) / 10
+    o === null || o === undefined || isNaN(o) ? null : Math.round(10 * o) / 10
   );
 
   return { hour: hour, avg: hourly_avg };
