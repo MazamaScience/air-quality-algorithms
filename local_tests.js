@@ -1,6 +1,7 @@
 import { pm_nowcast } from "./index.js";
 import { trimDate } from "./index.js";
 import { dailyAverage } from "./index.js";
+import { diurnalAverage } from "./index.js";
 
 import moment from "moment-timezone";
 
@@ -21,5 +22,7 @@ let nowcast = pm_nowcast(x); // looks good
 let trimmed = trimDate(datetime, x, timezone);
 
 let daily = dailyAverage(datetime, x, timezone);
+
+let diurnal = diurnalAverage(datetime, x, timezone);
 
 let z = 1;
