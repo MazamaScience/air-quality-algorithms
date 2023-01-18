@@ -1,6 +1,6 @@
 {
   "name": "air-monitor-algorithms",
-  "version": "0.0.2",
+  "version": "1.0.1",
   "description": "Algorithms used in air quality processing.",
   "main": "index.js",
   "type": "module",
