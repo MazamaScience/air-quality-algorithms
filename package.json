@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "uvu"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/MazamaScience/air-monitor-algorithms#readme",
   "dependencies": {
-    "arquero": "^5.1.0",
     "moment-timezone": "^0.5.40"
+  },
+  "devDependencies": {
+    "uvu": "^0.5.6"
   }
 }
