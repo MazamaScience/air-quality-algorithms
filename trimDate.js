@@ -19,7 +19,7 @@ export function trimDate(datetime, x, timezone) {
   let start = hours[0] === 0 ? 0 : 24 - hours[0];
   let end =
     hours[hours.length - 1] === 23
-      ? hours.length - 1
+      ? hours.length
       : hours.length - hours[hours.length - 1] - 1;
 
   let trimmed_datetime = datetime.slice(start, end);

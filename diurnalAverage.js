@@ -6,7 +6,7 @@ import { trimDate } from "./trimDate.js";
  *
  * The returned object contains two properties:
  * * hour -- Array of local time hours [0-24]
- * * avg -- Array of time-of-day averages for each hour
+ * * average -- Array of time-of-day averages for each hour
  *
  * By default, the averages are calculated using data from the most recent 7 days
  * in the `datetime` array.
@@ -28,7 +28,7 @@ export function diurnalAverage(datetime, x, timezone, dayCount = 7) {
   let hours = localTime.map((o) => o.hours());
 
   let hour = [];
-  let hourly_avg = [];
+  let hourly_average = [];
 
   // For each hour, average together the contributions from each day
   for (let h = 0; h < 24; h++) {
@@ -37,13 +37,13 @@ export function diurnalAverage(datetime, x, timezone, dayCount = 7) {
       sum += x[h + d * 24];
     }
     hour[h] = h;
-    hourly_avg[h] = sum / dayCount;
+    hourly_average[h] = sum / dayCount;
   }
 
   // Round to one decimal place and ensure null is the missing value
-  hourly_avg = hourly_avg.map((o) =>
+  hourly_average = hourly_average.map((o) =>
     o === null || o === undefined || isNaN(o) ? null : Math.round(10 * o) / 10
   );
 
-  return { hour: hour, avg: hourly_avg };
+  return { hour: hour, average: hourly_average };
 }

@@ -18,6 +18,19 @@ for (var i = 0; i < 240; i++) {
   x[i] = Math.round(val * 10) / 10;
 }
 
+test("trimming Date objects works for 'UTC'", () => {
+  let timezone = "UTC";
+  let trimmed = trimDate(datetime, x, timezone);
+  let tz_start = moment.tz(trimmed.datetime[0], timezone);
+  let tz_end = moment.tz(trimmed.datetime[239], timezone);
+  assert.is(trimmed.datetime.length, 240);
+  assert.is(tz_start.hours(), 0);
+  assert.is(tz_end.hours(), 23);
+  // UTC is 8 hours ahead of "America/Los_Angeles" during the winter
+  assert.is(trimmed.datetime[0].valueOf(), datetime[0].valueOf());
+  assert.is(trimmed.x[0], x[0]);
+});
+
 test("trimming Date objects works for 'America/Los_Angeles'", () => {
   let timezone = "America/Los_Angeles";
   let trimmed = trimDate(datetime, x, timezone);
@@ -28,6 +41,7 @@ test("trimming Date objects works for 'America/Los_Angeles'", () => {
   assert.is(tz_end.hours(), 23);
   // UTC is 8 hours ahead of "America/Los_Angeles" during the winter
   assert.is(trimmed.datetime[0].valueOf(), datetime[8].valueOf());
+  assert.is(trimmed.x[0], x[8]);
 });
 
 test("trimming Date objects works for 'America/New_York'", () => {
@@ -40,6 +54,7 @@ test("trimming Date objects works for 'America/New_York'", () => {
   assert.is(tz_end.hours(), 23);
   // UTC is 5 hours ahead of "America/New_York" during the winter
   assert.is(trimmed.datetime[0].valueOf(), datetime[5].valueOf());
+  assert.is(trimmed.x[0], x[5]);
 });
 
 // ----- Test passing in moment objects ----------------------------------------
@@ -61,6 +76,7 @@ test("trimming moment.tz objects works for 'America/Los_Angeles'", () => {
   assert.is(tz_end.hours(), 23);
   // UTC is 8 hours ahead of "America/Los_Angeles" during the winter
   assert.is(trimmed.datetime[0].valueOf(), datetime[8].valueOf());
+  assert.is(trimmed.x[0], x[8]);
 });
 
 test("trimming Date objects works for 'America/New_York'", () => {
@@ -73,6 +89,7 @@ test("trimming Date objects works for 'America/New_York'", () => {
   assert.is(tz_end.hours(), 23);
   // UTC is 5 hours ahead of "America/New_York" during the winter
   assert.is(trimmed.datetime[0].valueOf(), datetime[5].valueOf());
+  assert.is(trimmed.x[0], x[5]);
 });
 
 // ----- Run all tests ---------------------------------------------------------
