@@ -10,12 +10,12 @@ import { trimDate } from "./trimDate.js";
  *
  * By default, the averages are calculated using data from the most recent 7 days
  * in the `datetime` array.
- * @param {...Date} datetime Regular hourly axis representing the time associated
+ * @param {Array.<Date>} datetime Regular hourly axis representing the time associated
  * with each measurement.
- * @param {...Number} x Array of hourly measurements.
+ * @param {Array.<number>} x Array of hourly measurements.
  * @param {string} timezone Olson time zone to use as "local time".
- * @param {Number} dayCount Number of days to use.
- * @returns {...Number} Array of local time daily averages.
+ * @param {number} dayCount Number of days to use.
+ * @returns {Array.<number>} Array of local time daily averages.
  */
 export function diurnalAverage(datetime, x, timezone, dayCount = 7) {
   // Start by trimming to full days in the local timezone

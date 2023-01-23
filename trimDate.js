@@ -5,9 +5,9 @@ import moment from "moment-timezone";
  * discarded. The returned object contains two properties:
  * * datetime -- the original datetime array trimmed to full days
  * * x -- the original x array trimmed to full days
- * @param {...Date} datetime Regular hourly axis representing the time associated
+ * @param {Array.<Date>} datetime Regular hourly axis representing the time associated
  * with each measurement.
- * @param {...Number} x Array of hourly measurements.
+ * @param {Array.<number>} x Array of hourly measurements.
  * @param {string} timezone Olson time zone to use as "local time".
  * @returns {object} Object with `datetime` and `x` properties.
  */
