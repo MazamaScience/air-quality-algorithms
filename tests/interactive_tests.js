@@ -1,7 +1,7 @@
-import { pm_nowcast } from "../index.js";
-import { trimDate } from "../index.js";
-import { dailyAverage } from "../index.js";
-import { diurnalAverage } from "../index.js";
+import { pm_nowcast } from "../src/index.js";
+import { trimDate } from "../src/index.js";
+import { dailyAverage } from "../src/index.js";
+import { diurnalAverage } from "../src/index.js";
 
 import moment from "moment-timezone";
 

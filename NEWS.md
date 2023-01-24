@@ -1,3 +1,8 @@
+# air-monitor-algorithms 1.0.2
+
+- Restructured the directory to put all source code in a `src/` directory.
+- Now generating documentation using `jsdoc`.
+
 # air-monitor-algorithms 1.0.1
 
 Initial release includes the following algorithms:

@@ -2,7 +2,7 @@ import { test } from "uvu";
 import * as assert from "uvu/assert";
 
 import moment from "moment-timezone";
-import { diurnalAverage } from "../index.js";
+import { diurnalAverage } from "../src/index.js";
 
 // Start of Valentine's Day in Greenwich
 let start = moment.tz("2023-02-14 00:00:00", "UTC");

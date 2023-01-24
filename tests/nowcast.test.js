@@ -1,7 +1,7 @@
 import { test } from "uvu";
 import * as assert from "uvu/assert";
 
-import { pm_nowcast } from "../index.js";
+import { pm_nowcast } from "../src/index.js";
 
 test("nowcast works properly", () => {
   // Data from: https://forum.airnowtech.org/t/the-nowcast-for-pm2-5-and-pm10/172
