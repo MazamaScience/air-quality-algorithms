@@ -7,11 +7,12 @@ import { trimDate } from "./trimDate.js";
  * The returned object contains two properties:
  * * datetime -- Array of date objects specifying the starting hour of each day
  * * average -- Array or daily average values for each day
+ *
  * @param {Array.<Date>} datetime Regular hourly axis representing the time associated
  * with each measurement.
  * @param {Array.<number>} x Array of hourly measurements.
  * @param {string} timezone Olson time zone to use as "local time".
- * @returns {Array.<number>} Array of local time daily averages.
+ * @returns {object} An object with `datetime` and `average` properties.
  */
 export function dailyAverage(datetime, x, timezone) {
   // Start by trimming to full days in the local timezone

@@ -3,8 +3,10 @@ import moment from "moment-timezone";
 /**
  * Returns an object  trimmed to full local time days. Any partial days are
  * discarded. The returned object contains two properties:
+ *
  * * datetime -- the original datetime array trimmed to full days
  * * x -- the original x array trimmed to full days
+ *
  * @param {Array.<Date>} datetime Regular hourly axis representing the time associated
  * with each measurement.
  * @param {Array.<number>} x Array of hourly measurements.

@@ -1,6 +1,5 @@
-/**
- * The air-quality-algorithms module contains functions that process hourly
- * arrays of air quality monitoring data.
+/*
+ * Re-export all functions defined in individual files.
  */
 
 export { dailyAverage } from "./dailyAverage.js";

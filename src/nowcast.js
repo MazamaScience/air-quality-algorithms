@@ -1,8 +1,10 @@
 /**
  * Returns an array of NowCast values derived from the incoming time series.
- * Missing values should be represented by 'null'.
- * **NOTE:** Incoming data must be on an hourly axis with no gaps.
- * @param {Array.<number>} pm Array of PM2.5 or PM10  measurements.
+ *
+ * **NOTE:** Incoming data must be on an hourly axis with no gaps. Missing
+ * values should be represented by 'null'.
+ *
+ * @param {Array.<number>} pm Array of hourly PM2.5 or PM10  measurements.
  * @returns {Array.<number>} Array of NowCast values.
  */
 export function pm_nowcast(pm) {
@@ -19,9 +21,13 @@ export function pm_nowcast(pm) {
 
 /**
  * Convert an array of up to 12 PM2.5 or PM10 measurements in chronological order
- * into a single NowCast value. Missing values should be represented by 'null'.
- * **NOTE:** Incoming data must be on an hourly axis with no gaps.
- * @param {Array.<number>} x Array of 12 values in chronological order.
+ * into a single NowCast value.
+ *
+ * **NOTE:** Incoming data must be on an hourly axis with no gaps.  Missing
+ * values should be represented by 'null'.
+ *
+ * @private
+ * @param {Array.<number>} x Array of 12 hourly values in chronological order.
  * @returns {number} NowCast value.
  */
 function nowcastPM(x) {

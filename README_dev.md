@@ -2,5 +2,7 @@
 
 ## Documentation
 
-JSDoc -- https://github.com/jsdoc/jsdoc
-JSDoc usage -- https://sevic.dev/notes/javascript-jsdoc/
+JSDoc usage
+
+- https://sevic.dev/notes/javascript-jsdoc/
+- https://marioyepes.com/jsdoc-intro-and-tutorial/

@@ -104,7 +104,7 @@
     
 
     
-    <h4 class="name" id="dailyAverage"><span class="type-signature"></span>dailyAverage<span class="signature">(datetime, x, timezone)</span><span class="type-signature"> &rarr; {Array.&lt;number>}</span></h4>
+    <h4 class="name" id="dailyAverage"><span class="type-signature"></span>dailyAverage<span class="signature">(datetime, x, timezone)</span><span class="type-signature"> &rarr; {object}</span></h4>
     
 
     
@@ -112,11 +112,12 @@
 
 
 <div class="description">
-    Calculates daily averages for the time series specified by `datetime` and `x`.
-
-The returned object contains two properties:
-* datetime -- Array of date objects specifying the starting hour of each day
-* average -- Array or daily average values for each day
+    <p>Calculates daily averages for the time series specified by <code>datetime</code> and <code>x</code>.</p>
+<p>The returned object contains two properties:</p>
+<ul>
+<li>datetime -- Array of date objects specifying the starting hour of each day</li>
+<li>average -- Array or daily average values for each day</li>
+</ul>
 </div>
 
 
@@ -168,8 +169,8 @@ The returned object contains two properties:
 
             
 
-            <td class="description last">Regular hourly axis representing the time associated
-with each measurement.</td>
+            <td class="description last"><p>Regular hourly axis representing the time associated
+with each measurement.</p></td>
         </tr>
 
     
@@ -192,7 +193,7 @@ with each measurement.</td>
 
             
 
-            <td class="description last">Array of hourly measurements.</td>
+            <td class="description last"><p>Array of hourly measurements.</p></td>
         </tr>
 
     
@@ -215,7 +216,7 @@ with each measurement.</td>
 
             
 
-            <td class="description last">Olson time zone to use as "local time".</td>
+            <td class="description last"><p>Olson time zone to use as &quot;local time&quot;.</p></td>
         </tr>
 
     
@@ -256,7 +257,7 @@ with each measurement.</td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dailyAverage.js.html">dailyAverage.js</a>, <a href="dailyAverage.js.html#line16">line 16</a>
+        <a href="dailyAverage.js.html">dailyAverage.js</a>, <a href="dailyAverage.js.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -285,7 +286,7 @@ with each measurement.</td>
 
         
 <div class="param-desc">
-    Array of local time daily averages.
+    <p>An object with <code>datetime</code> and <code>average</code> properties.</p>
 </div>
 
 
@@ -296,7 +297,7 @@ with each measurement.</td>
     </dt>
     <dd>
         
-<span class="param-type">Array.&lt;number></span>
+<span class="param-type">object</span>
 
 
     </dd>
@@ -314,7 +315,7 @@ with each measurement.</td>
     
 
     
-    <h4 class="name" id="diurnalAverage"><span class="type-signature"></span>diurnalAverage<span class="signature">(datetime, x, timezone, dayCount)</span><span class="type-signature"> &rarr; {Array.&lt;number>}</span></h4>
+    <h4 class="name" id="diurnalAverage"><span class="type-signature"></span>diurnalAverage<span class="signature">(datetime, x, timezone, dayCount)</span><span class="type-signature"> &rarr; {object}</span></h4>
     
 
     
@@ -322,14 +323,14 @@ with each measurement.</td>
 
 
 <div class="description">
-    Calculates diurnal averages for the time series specified by `datetime` and `x`.
-
-The returned object contains two properties:
-* hour -- Array of local time hours [0-24]
-* average -- Array of time-of-day averages for each hour
-
-By default, the averages are calculated using data from the most recent 7 days
-in the `datetime` array.
+    <p>Calculates diurnal averages for the time series specified by <code>datetime</code> and <code>x</code>.</p>
+<p>The returned object contains two properties:</p>
+<ul>
+<li>hour -- Array of local time hours [0-24]</li>
+<li>average -- Array of time-of-day averages for each hour</li>
+</ul>
+<p>By default, the averages are calculated using data from the most recent 7 days
+in the <code>datetime</code> array.</p>
 </div>
 
 
@@ -381,8 +382,8 @@ in the `datetime` array.
 
             
 
-            <td class="description last">Regular hourly axis representing the time associated
-with each measurement.</td>
+            <td class="description last"><p>Regular hourly axis representing the time associated
+with each measurement.</p></td>
         </tr>
 
     
@@ -405,7 +406,7 @@ with each measurement.</td>
 
             
 
-            <td class="description last">Array of hourly measurements.</td>
+            <td class="description last"><p>Array of hourly measurements.</p></td>
         </tr>
 
     
@@ -428,7 +429,7 @@ with each measurement.</td>
 
             
 
-            <td class="description last">Olson time zone to use as "local time".</td>
+            <td class="description last"><p>Olson time zone to use as &quot;local time&quot;.</p></td>
         </tr>
 
     
@@ -451,7 +452,7 @@ with each measurement.</td>
 
             
 
-            <td class="description last">Number of days to use.</td>
+            <td class="description last"><p>Number of days to use.</p></td>
         </tr>
 
     
@@ -492,7 +493,7 @@ with each measurement.</td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="diurnalAverage.js.html">diurnalAverage.js</a>, <a href="diurnalAverage.js.html#line20">line 20</a>
+        <a href="diurnalAverage.js.html">diurnalAverage.js</a>, <a href="diurnalAverage.js.html#line21">line 21</a>
     </li></ul></dd>
     
 
@@ -521,7 +522,7 @@ with each measurement.</td>
 
         
 <div class="param-desc">
-    Array of local time daily averages.
+    <p>An object with <code>hour</code> and <code>average</code> properties.</p>
 </div>
 
 
@@ -532,168 +533,7 @@ with each measurement.</td>
     </dt>
     <dd>
         
-<span class="param-type">Array.&lt;number></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="nowcastPM"><span class="type-signature"></span>nowcastPM<span class="signature">(x)</span><span class="type-signature"> &rarr; {number}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Convert an array of up to 12 PM2.5 or PM10 measurements in chronological order
-into a single NowCast value. Missing values should be represented by 'null'.
-**NOTE:** Incoming data must be on an hourly axis with no gaps.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>x</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;number></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Array of 12 values in chronological order.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="nowcast.js.html">nowcast.js</a>, <a href="nowcast.js.html#line27">line 27</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    NowCast value.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">number</span>
+<span class="param-type">object</span>
 
 
     </dd>
@@ -719,9 +559,9 @@ into a single NowCast value. Missing values should be represented by 'null'.
 
 
 <div class="description">
-    Returns an array of NowCast values derived from the incoming time series.
-Missing values should be represented by 'null'.
-**NOTE:** Incoming data must be on an hourly axis with no gaps.
+    <p>Returns an array of NowCast values derived from the incoming time series.</p>
+<p><strong>NOTE:</strong> Incoming data must be on an hourly axis with no gaps. Missing
+values should be represented by 'null'.</p>
 </div>
 
 
@@ -773,7 +613,7 @@ Missing values should be represented by 'null'.
 
             
 
-            <td class="description last">Array of PM2.5 or PM10  measurements.</td>
+            <td class="description last"><p>Array of hourly PM2.5 or PM10  measurements.</p></td>
         </tr>
 
     
@@ -814,7 +654,7 @@ Missing values should be represented by 'null'.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="nowcast.js.html">nowcast.js</a>, <a href="nowcast.js.html#line8">line 8</a>
+        <a href="nowcast.js.html">nowcast.js</a>, <a href="nowcast.js.html#line10">line 10</a>
     </li></ul></dd>
     
 
@@ -843,7 +683,7 @@ Missing values should be represented by 'null'.
 
         
 <div class="param-desc">
-    Array of NowCast values.
+    <p>Array of NowCast values.</p>
 </div>
 
 
@@ -880,10 +720,12 @@ Missing values should be represented by 'null'.
 
 
 <div class="description">
-    Returns an object  trimmed to full local time days. Any partial days are
-discarded. The returned object contains two properties:
-* datetime -- the original datetime array trimmed to full days
-* x -- the original x array trimmed to full days
+    <p>Returns an object  trimmed to full local time days. Any partial days are
+discarded. The returned object contains two properties:</p>
+<ul>
+<li>datetime -- the original datetime array trimmed to full days</li>
+<li>x -- the original x array trimmed to full days</li>
+</ul>
 </div>
 
 
@@ -935,8 +777,8 @@ discarded. The returned object contains two properties:
 
             
 
-            <td class="description last">Regular hourly axis representing the time associated
-with each measurement.</td>
+            <td class="description last"><p>Regular hourly axis representing the time associated
+with each measurement.</p></td>
         </tr>
 
     
@@ -959,7 +801,7 @@ with each measurement.</td>
 
             
 
-            <td class="description last">Array of hourly measurements.</td>
+            <td class="description last"><p>Array of hourly measurements.</p></td>
         </tr>
 
     
@@ -982,7 +824,7 @@ with each measurement.</td>
 
             
 
-            <td class="description last">Olson time zone to use as "local time".</td>
+            <td class="description last"><p>Olson time zone to use as &quot;local time&quot;.</p></td>
         </tr>
 
     
@@ -1023,7 +865,7 @@ with each measurement.</td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="trimDate.js.html">trimDate.js</a>, <a href="trimDate.js.html#line14">line 14</a>
+        <a href="trimDate.js.html">trimDate.js</a>, <a href="trimDate.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
@@ -1052,7 +894,7 @@ with each measurement.</td>
 
         
 <div class="param-desc">
-    Object with `datetime` and `x` properties.
+    <p>Object with <code>datetime</code> and <code>x</code> properties.</p>
 </div>
 
 
@@ -1091,13 +933,13 @@ with each measurement.</td>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#dailyAverage">dailyAverage</a></li><li><a href="global.html#diurnalAverage">diurnalAverage</a></li><li><a href="global.html#nowcastPM">nowcastPM</a></li><li><a href="global.html#pm_nowcast">pm_nowcast</a></li><li><a href="global.html#trimDate">trimDate</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#dailyAverage">dailyAverage</a></li><li><a href="global.html#diurnalAverage">diurnalAverage</a></li><li><a href="global.html#pm_nowcast">pm_nowcast</a></li><li><a href="global.html#trimDate">trimDate</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Tue Jan 24 2023 05:35:34 GMT-0800 (Pacific Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Tue Jan 24 2023 09:52:38 GMT-0800 (Pacific Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
