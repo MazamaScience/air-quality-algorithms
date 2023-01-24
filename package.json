@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
-    "docs": "jsdoc src --destination docs",
+    "docs": "jsdoc src --destination docs --readme ./README.md",
     "test": "uvu"
   },
   "repository": {
