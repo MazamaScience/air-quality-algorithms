@@ -104,7 +104,7 @@
     
 
     
-    <h4 class="name" id="dailyAverage"><span class="type-signature"></span>dailyAverage<span class="signature">(datetime, x, timezone)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <h4 class="name" id="arrayCount"><span class="type-signature"></span>arrayCount<span class="signature">(x)</span><span class="type-signature"> &rarr; {number}</span></h4>
     
 
     
@@ -112,11 +112,826 @@
 
 
 <div class="description">
-    <p>Calculates daily averages for the time series specified by <code>datetime</code> and <code>x</code>.</p>
-<p>The returned object contains two properties:</p>
+    <p>Return the count of valid values an array, ignoring any non-numeric values
+such as <code>NaN</code> or <code>null</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line79">line 79</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Count of numeric values.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="arrayMax"><span class="type-signature"></span>arrayMax<span class="signature">(x)</span><span class="type-signature"> &rarr; {number|null}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Return the maximum value in an array, ignoring any non-numeric values such as
+<code>NaN</code> or <code>null</code>. If all values are non-numeric, <code>null</code> is returned.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line60">line 60</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Maximum numeric value or null.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+|
+
+<span class="param-type">null</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="arrayMean"><span class="type-signature"></span>arrayMean<span class="signature">(x)</span><span class="type-signature"> &rarr; {number|null}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Return the mean of an array, ignoring any non-numeric values such as
+<code>NaN</code> or <code>null</code>. If all values are non-numeric, <code>null</code> is returned.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line109">line 109</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Mean of numeric values or null.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+|
+
+<span class="param-type">null</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="arrayMin"><span class="type-signature"></span>arrayMin<span class="signature">(x)</span><span class="type-signature"> &rarr; {number|null}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Return the minimum value in an array, ignoring any non-numeric values such as
+<code>NaN</code> or <code>null</code>. If all values are non-numeric, <code>null</code> is returned.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line41">line 41</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Minimum numeric value or null.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+|
+
+<span class="param-type">null</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="arraySum"><span class="type-signature"></span>arraySum<span class="signature">(x)</span><span class="type-signature"> &rarr; {number|null}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Return the sum of an array, ignoring any non-numeric values such as
+<code>NaN</code> or <code>null</code>. If all values are non-numeric, <code>null</code> is returned.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line94">line 94</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Sum of numeric values or null.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+|
+
+<span class="param-type">null</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="dailyStats"><span class="type-signature"></span>dailyStats<span class="signature">(datetime, x, timezone)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Calculates daily statistics for the time series specified by <code>datetime</code> and <code>x</code>.</p>
+<p>The returned object contains five properties:</p>
 <ul>
-<li>datetime -- Array of date objects specifying the starting hour of each day</li>
-<li>average -- Array or daily average values for each day</li>
+<li>datetime -- Array of date objects specifying the starting hour of each day.</li>
+<li>count -- Array of daily counts of non-missing values.</li>
+<li>min -- Array of daily minimum values.</li>
+<li>mean -- Array of daily mean values.</li>
+<li>max -- Array of daily maximum values.</li>
 </ul>
 </div>
 
@@ -169,8 +984,8 @@
 
             
 
-            <td class="description last"><p>Regular hourly axis representing the time associated
-with each measurement.</p></td>
+            <td class="description last"><p>Regular hourly axis (no missing hours)
+representing the time associated with each measurement.</p></td>
         </tr>
 
     
@@ -257,7 +1072,7 @@ with each measurement.</p></td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dailyAverage.js.html">dailyAverage.js</a>, <a href="dailyAverage.js.html#line17">line 17</a>
+        <a href="dailyStats.js.html">dailyStats.js</a>, <a href="dailyStats.js.html#line29">line 29</a>
     </li></ul></dd>
     
 
@@ -286,7 +1101,8 @@ with each measurement.</p></td>
 
         
 <div class="param-desc">
-    <p>An object with <code>datetime</code> and <code>average</code> properties.</p>
+    <p>An object with <code>datetime</code>, <code>count</code>, <code>min</code>, <code>mean</code> and <code>max</code>
+properties.</p>
 </div>
 
 
@@ -315,7 +1131,7 @@ with each measurement.</p></td>
     
 
     
-    <h4 class="name" id="diurnalAverage"><span class="type-signature"></span>diurnalAverage<span class="signature">(datetime, x, timezone, dayCount)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <h4 class="name" id="diurnalStats"><span class="type-signature"></span>diurnalStats<span class="signature">(datetime, x, timezone, dayCount)</span><span class="type-signature"> &rarr; {object}</span></h4>
     
 
     
@@ -326,10 +1142,13 @@ with each measurement.</p></td>
     <p>Calculates diurnal averages for the time series specified by <code>datetime</code> and <code>x</code>.</p>
 <p>The returned object contains two properties:</p>
 <ul>
-<li>hour -- Array of local time hours [0-24]</li>
-<li>average -- Array of time-of-day averages for each hour</li>
+<li>hour -- Array of local time hours [0-24].</li>
+<li>count -- Array of hour-of-day counts of non-missing values.</li>
+<li>min -- Array of hour-of-day minimum values.</li>
+<li>mean -- Array of hour-of-day mean values.</li>
+<li>max -- Array of hour-of-day maximum values</li>
 </ul>
-<p>By default, the averages are calculated using data from the most recent 7 days
+<p>By default, statistics are calculated using data from the most recent 7 days
 in the <code>datetime</code> array.</p>
 </div>
 
@@ -382,8 +1201,8 @@ in the <code>datetime</code> array.</p>
 
             
 
-            <td class="description last"><p>Regular hourly axis representing the time associated
-with each measurement.</p></td>
+            <td class="description last"><p>Regular hourly axis (no missing hours)
+representing the time associated with each measurement.</p></td>
         </tr>
 
     
@@ -493,7 +1312,7 @@ with each measurement.</p></td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="diurnalAverage.js.html">diurnalAverage.js</a>, <a href="diurnalAverage.js.html#line21">line 21</a>
+        <a href="diurnalStats.js.html">diurnalStats.js</a>, <a href="diurnalStats.js.html#line25">line 25</a>
     </li></ul></dd>
     
 
@@ -654,7 +1473,7 @@ values should be represented by 'null'.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="nowcast.js.html">nowcast.js</a>, <a href="nowcast.js.html#line10">line 10</a>
+        <a href="nowcast.js.html">nowcast.js</a>, <a href="nowcast.js.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -712,6 +1531,190 @@ values should be represented by 'null'.</p>
     
 
     
+    <h4 class="name" id="roundAndUseNull"><span class="type-signature"></span>roundAndUseNull<span class="signature">(x, digits)</span><span class="type-signature"> &rarr; {Array.&lt;number>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Convert an array of values to an array rounded to <code>digits</code> decimal places
+and using <code>null</code> as the default missing value. Missing values are
+any members of <code>x</code> with values of <code>undefined</code>, <code>NaN</code> or <code>null</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of values.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>digits</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Number of digits to retain after the decimal point.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line10">line 10</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Array of values.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;number></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
     <h4 class="name" id="trimDate"><span class="type-signature"></span>trimDate<span class="signature">(datetime, x, timezone)</span><span class="type-signature"> &rarr; {object}</span></h4>
     
 
@@ -720,7 +1723,7 @@ values should be represented by 'null'.</p>
 
 
 <div class="description">
-    <p>Returns an object  trimmed to full local time days. Any partial days are
+    <p>Returns an object trimmed to full local time days. Any partial days are
 discarded. The returned object contains two properties:</p>
 <ul>
 <li>datetime -- the original datetime array trimmed to full days</li>
@@ -918,6 +1921,166 @@ with each measurement.</p></td>
 
 
         
+            
+
+    
+
+    
+    <h4 class="name" id="useNull"><span class="type-signature"></span>useNull<span class="signature">(x)</span><span class="type-signature"> &rarr; {Array.&lt;number>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Convert an array of values to an array where all values of <code>undefined</code> or
+<code>NaN</code> have been replaced by <code>null</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils.js.html">utils.js</a>, <a href="utils.js.html#line27">line 27</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Array of values.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;number></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
     
 
     
@@ -933,13 +2096,13 @@ with each measurement.</p></td>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#dailyAverage">dailyAverage</a></li><li><a href="global.html#diurnalAverage">diurnalAverage</a></li><li><a href="global.html#pm_nowcast">pm_nowcast</a></li><li><a href="global.html#trimDate">trimDate</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#arrayCount">arrayCount</a></li><li><a href="global.html#arrayMax">arrayMax</a></li><li><a href="global.html#arrayMean">arrayMean</a></li><li><a href="global.html#arrayMin">arrayMin</a></li><li><a href="global.html#arraySum">arraySum</a></li><li><a href="global.html#dailyStats">dailyStats</a></li><li><a href="global.html#diurnalStats">diurnalStats</a></li><li><a href="global.html#pm_nowcast">pm_nowcast</a></li><li><a href="global.html#roundAndUseNull">roundAndUseNull</a></li><li><a href="global.html#trimDate">trimDate</a></li><li><a href="global.html#useNull">useNull</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Tue Jan 24 2023 09:52:38 GMT-0800 (Pacific Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Wed Jan 25 2023 15:39:14 GMT-0800 (Pacific Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -12,12 +12,20 @@ US Forest Service.
 series data are on a regular hourly axis with no gaps. When working with this
 javascript package, missing values should be indicated by `null`.
 
-Supported functions include:
+Important functions for data analysis include:
 
-- `dailyAverage()` -- Converts time series data into local time daily averages.
-- `diurnalAverage()` -- Converts time series data into local time averages by hour-of-day.
+- `dailyStats()` -- Converts time series data into local time daily statistics.
+- `diurnalStats()` -- Converts time series data into local time statistics by hour-of-day.
 - `pm_nowcast()` -- Applies the _Nowcast_ algorithm to PM2.5 or PM10 time series data.
 - `trimDate()` -- Returns an object with time series data trimmed to local time full days.
+
+Low level utility functions for sane array manipulation in javascript include:
+
+- `arrayCount()` -- Returns the count of non-missing values in an array.
+- `arraySum()` -- Returns the sum of non-missing values in an array.
+- `arrayMin()` -- Returns the minimum of non-missing values in an array.
+- `arrayMean()` -- Returns the mean of non-missing values in an array.
+- `arrayMax()` -- Returns the maximum of non-missing values in an array.
 
 ## Usage
 
@@ -33,8 +41,8 @@ from this module:
 
 ```
 import {
-  dailyAverage,
-  diurnalAverage,
+  dailyStats,
+  diurnalStats,
   pm_nowcast,
 } from "air-monitor-algorithms";
 ...

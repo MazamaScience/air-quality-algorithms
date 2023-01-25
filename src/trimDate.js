@@ -1,7 +1,7 @@
 import moment from "moment-timezone";
 
 /**
- * Returns an object  trimmed to full local time days. Any partial days are
+ * Returns an object trimmed to full local time days. Any partial days are
  * discarded. The returned object contains two properties:
  *
  * * datetime -- the original datetime array trimmed to full days

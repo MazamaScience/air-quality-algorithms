@@ -1,3 +1,5 @@
+import { roundAndUseNull } from "./utils.js";
+
 /**
  * Returns an array of NowCast values derived from the incoming time series.
  *
@@ -16,6 +18,10 @@ export function pm_nowcast(pm) {
     let start = end < 12 ? 0 : end - 12;
     nowcast[i] = nowcastPM(pm.slice(start, end));
   }
+
+  // Round to one decimal place and use null as the missing value
+  nowcast = roundAndUseNull(nowcast);
+
   return nowcast;
 }
 
