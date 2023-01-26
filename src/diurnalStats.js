@@ -19,7 +19,7 @@ import { roundAndUseNull, useNull } from "./utils.js";
  * representing the time associated with each measurement.
  * @param {Array.<number>} x Array of hourly measurements.
  * @param {string} timezone Olson time zone to use as "local time".
- * @param {number} dayCount Number of days to use.
+ * @param {number} dayCount Number of most recent days to use.
  * @returns {object} An object with `hour` and `average` properties.
  */
 export function diurnalStats(datetime, x, timezone, dayCount = 7) {
