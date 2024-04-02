@@ -5,6 +5,7 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
+    "build": "babel src -d dist",
     "docs": "jsdoc src -d docs -R ./README.md -c ./jsdoc.conf.json",
     "test": "uvu"
   },
@@ -25,6 +26,9 @@
     "moment-timezone": "^0.5.40"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
     "uvu": "^0.5.6"
   }
 }
