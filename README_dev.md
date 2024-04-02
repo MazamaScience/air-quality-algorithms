@@ -24,6 +24,7 @@ UVU
 Babel
 
 - https://whitep4nth3r.com/blog/how-to-build-test-and-release-node-module-es6/
+- https://gist.github.com/ncochard/6cce17272a069fdb4ac92569d85508f4
 
 ## Publish
 
