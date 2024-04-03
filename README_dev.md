@@ -21,6 +21,19 @@ UVU
 
 `npm run build`
 
+### rollup.js
+
+- https://rollupjs.org/introduction/
+- https://rollupjs.org/tutorial/
+
+#### rollup plugins
+
+- https://github.com/rollup/plugins/tree/master/packages/node-resolve
+
+```
+npm install @rollup/plugin-node-resolve --save-dev
+```
+
 Babel
 
 - https://whitep4nth3r.com/blog/how-to-build-test-and-release-node-module-es6/

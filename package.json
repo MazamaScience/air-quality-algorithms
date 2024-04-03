@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "rollup --config rollup.config.mjs",
     "docs": "jsdoc src -d docs -R ./README.md -c ./jsdoc.conf.json",
     "test": "uvu"
   },
@@ -29,6 +29,7 @@
     "@babel/cli": "^7.24.1",
     "@babel/core": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
+    "rollup": "^4.14",
     "uvu": "^0.5.6"
   }
 }
